@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		C6CB293924D01EB40099E250 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB293824D01EB40099E250 /* LoadingView.swift */; };
 		C6CB293B24D0250F0099E250 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB293A24D0250F0099E250 /* ActivityIndicatorView.swift */; };
 		C6CB293D24D02CA00099E250 /* HtmlTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB293C24D02CA00099E250 /* HtmlTextView.swift */; };
+		C6CB294824D2AB650099E250 /* FSPagerView in Frameworks */ = {isa = PBXBuildFile; productRef = C6CB294724D2AB650099E250 /* FSPagerView */; };
+		C6CB294A24D2AB900099E250 /* PagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB294924D2AB900099E250 /* PagerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,7 @@
 		C6CB293824D01EB40099E250 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C6CB293A24D0250F0099E250 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		C6CB293C24D02CA00099E250 /* HtmlTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlTextView.swift; sourceTree = "<group>"; };
+		C6CB294924D2AB900099E250 /* PagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6CB294824D2AB650099E250 /* FSPagerView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +150,7 @@
 				C6CB293824D01EB40099E250 /* LoadingView.swift */,
 				C6CB293A24D0250F0099E250 /* ActivityIndicatorView.swift */,
 				C6CB293C24D02CA00099E250 /* HtmlTextView.swift */,
+				C6CB294924D2AB900099E250 /* PagerView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -166,6 +171,9 @@
 			dependencies = (
 			);
 			name = test;
+			packageProductDependencies = (
+				C6CB294724D2AB650099E250 /* FSPagerView */,
+			);
 			productName = test;
 			productReference = C6CB290724D012750099E250 /* test.app */;
 			productType = "com.apple.product-type.application";
@@ -237,6 +245,9 @@
 				Base,
 			);
 			mainGroup = C6CB28FE24D012750099E250;
+			packageReferences = (
+				C6CB294624D2AB640099E250 /* XCRemoteSwiftPackageReference "FSPagerView" */,
+			);
 			productRefGroup = C6CB290824D012750099E250 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -281,6 +292,7 @@
 			files = (
 				C6CB293D24D02CA00099E250 /* HtmlTextView.swift in Sources */,
 				C6CB293724D016B80099E250 /* Webview.swift in Sources */,
+				C6CB294A24D2AB900099E250 /* PagerView.swift in Sources */,
 				C6CB293B24D0250F0099E250 /* ActivityIndicatorView.swift in Sources */,
 				C6CB293924D01EB40099E250 /* LoadingView.swift in Sources */,
 				C6CB290D24D012750099E250 /* ContentView.swift in Sources */,
@@ -604,6 +616,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C6CB294624D2AB640099E250 /* XCRemoteSwiftPackageReference "FSPagerView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSPagerView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C6CB294724D2AB650099E250 /* FSPagerView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6CB294624D2AB640099E250 /* XCRemoteSwiftPackageReference "FSPagerView" */;
+			productName = FSPagerView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6CB28FF24D012750099E250 /* Project object */;
 }
