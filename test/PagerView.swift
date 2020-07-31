@@ -10,32 +10,44 @@
 import SwiftUI
 import FSPagerView
 
+struct PageViewItem {
+    var image: UIImage
+    var text: String?
+}
+
 struct PagerView: UIViewRepresentable {
-    let frame: CGRect
-    let automaticSlidingInterval: CGFloat? = nil
+    let items: [PageViewItem]
+    let frame: CGRect?
+    let automaticSlidingInterval: CGFloat?
     
     class Coordinator: NSObject, FSPagerViewDelegate, FSPagerViewDataSource {
+        var parent: PagerView
+        
+        init(_ parent: PagerView) {
+            self.parent = parent
+        }
+        
         func numberOfItems(in pagerView: FSPagerView) -> Int {
-            return 5
+            return parent.items.count
         }
         
         func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
             let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
-            // TODO 
-//                cell.imageView?.image = ...
-//                cell.textLabel?.text = ...
-                return cell
+            cell.imageView?.image = parent.items[index].image
+            cell.imageView?.contentMode = .scaleAspectFill
+            cell.imageView?.clipsToBounds = true
+            cell.textLabel?.text = parent.items[index].text
+            return cell
         }
     }
     
     func makeCoordinator() -> Coordinator {
-        Coordinator()
+        Coordinator(self)
     }
     
     func makeUIView(context: Context) -> FSPagerView {
-        // Create a pager view
-        let pagerView = FSPagerView(frame: frame)
-        if automaticSlidingInterval == nil {
+        let pagerView = frame != nil ? FSPagerView(frame: frame!) : FSPagerView()
+        if automaticSlidingInterval != nil {
             pagerView.automaticSlidingInterval = automaticSlidingInterval!
         }
         pagerView.delegate = context.coordinator
@@ -46,7 +58,12 @@ struct PagerView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: FSPagerView, context: Context) {
-        uiView.frame = frame
+        if frame != nil {
+            uiView.frame = frame!
+        }
+        if automaticSlidingInterval != nil {
+            uiView.automaticSlidingInterval = automaticSlidingInterval!
+        }
         
 //        uiView.delegate = context.coordinator
 //        uiView.dataSource = context.coordinator

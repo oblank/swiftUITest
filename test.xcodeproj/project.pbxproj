@@ -19,6 +19,7 @@
 		C6CB293D24D02CA00099E250 /* HtmlTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB293C24D02CA00099E250 /* HtmlTextView.swift */; };
 		C6CB294824D2AB650099E250 /* FSPagerView in Frameworks */ = {isa = PBXBuildFile; productRef = C6CB294724D2AB650099E250 /* FSPagerView */; };
 		C6CB294A24D2AB900099E250 /* PagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB294924D2AB900099E250 /* PagerView.swift */; };
+		C6CB294C24D3BF8E0099E250 /* TestPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB294B24D3BF8E0099E250 /* TestPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		C6CB293A24D0250F0099E250 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		C6CB293C24D02CA00099E250 /* HtmlTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlTextView.swift; sourceTree = "<group>"; };
 		C6CB294924D2AB900099E250 /* PagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerView.swift; sourceTree = "<group>"; };
+		C6CB294B24D3BF8E0099E250 /* TestPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				C6CB290E24D012770099E250 /* Assets.xcassets */,
 				C6CB291324D012770099E250 /* Info.plist */,
 				C6CB291024D012770099E250 /* Preview Content */,
+				C6CB294B24D3BF8E0099E250 /* TestPageView.swift */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				C6CB294A24D2AB900099E250 /* PagerView.swift in Sources */,
 				C6CB293B24D0250F0099E250 /* ActivityIndicatorView.swift in Sources */,
 				C6CB293924D01EB40099E250 /* LoadingView.swift in Sources */,
+				C6CB294C24D3BF8E0099E250 /* TestPageView.swift in Sources */,
 				C6CB290D24D012750099E250 /* ContentView.swift in Sources */,
 				C6CB290B24D012750099E250 /* testApp.swift in Sources */,
 			);
